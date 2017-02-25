@@ -1,0 +1,281 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Project:</h2>
+C:\Users\Administrator\Desktop\工程模板\工程模板.uvproj
+Project File Date:  06/11/2014
+
+<h2>Output:</h2>
+Build target 'Target 1'
+compiling main.c...
+user\public.h(7): warning:  #1-D: last line of file ends without a newline
+user\public.h:   #endif
+user\public.h:         ^
+user\main.c(6): error:  #20: identifier "GPIO_InitTypeDef" is undefined
+user\main.c:    GPIO_InitTypeDef GPIO_InitStructure;
+user\main.c:    ^
+user\main.c(7): error:  #20: identifier "GPIO_Pin_All" is undefined
+user\main.c:    GPIO_InitStructure.GPIO_Pin=LED;
+user\main.c:                                ^
+user\main.c(8): error:  #20: identifier "GPIO_Mode_Out_PP" is undefined
+user\main.c:    GPIO_InitStructure.GPIO_Mode=GPIO_Mode_Out_PP;
+user\main.c:                                 ^
+user\main.c(9): error:  #20: identifier "GPIO_Speed_50MHz" is undefined
+user\main.c:    GPIO_InitStructure.GPIO_Speed=GPIO_Speed_50MHz;
+user\main.c:                                  ^
+user\main.c(10): warning:  #223-D: function "GPIO_Init" declared implicitly
+user\main.c:    GPIO_Init(GPIOB,&GPIO_InitStructure);   
+user\main.c:    ^
+user\main.c(15): warning:  #223-D: function "RCC_APB2PeriphClockCmd" declared implicitly
+user\main.c:    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB,ENABLE);
+user\main.c:    ^
+user\main.c(15): error:  #20: identifier "RCC_APB2Periph_GPIOB" is undefined
+user\main.c:    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB,ENABLE);
+user\main.c:                           ^
+user\main.c(27): warning:  #223-D: function "GPIO_SetBits" declared implicitly
+user\main.c:            GPIO_SetBits(GPIOB,LED);
+user\main.c:            ^
+user\main.c(27): error:  #20: identifier "GPIO_Pin_All" is undefined
+user\main.c:            GPIO_SetBits(GPIOB,LED);
+user\main.c:                               ^
+user\main.c(29): warning:  #223-D: function "GPIO_ResetBits" declared implicitly
+user\main.c:            GPIO_ResetBits(GPIOB,LED);
+user\main.c:            ^
+user\main.c: user\main.c: 5 warnings, 6 errors
+compiling stm32f10x_it.c...
+compiling core_cm3.c...
+compiling system_stm32f10x.c...
+Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x.h(96): error:  #35: #error directive: "Please select first the target STM32F10x device used in your application (in stm32f10x.h file)"
+Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x.h:    #error "Please select first the target STM32F10x device used in your application (in stm32f10x.h file)"
+Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x.h:     ^
+Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x.h: Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.c: 0 warnings, 1 error
+assembling startup_stm32f10x_hd.s...
+compiling stm32f10x_gpio.c...
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c(175): error:  #20: identifier "uint32_t" is undefined
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c:     uint32_t currentmode = 0x00, currentpin = 0x00, pinpos = 0x00, pos = 0x00;
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c:     ^
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c(176): error:  #20: identifier "uint32_t" is undefined
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c:     uint32_t tmpreg = 0x00, pinmask = 0x00;
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c:     ^
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c(183): error:  #20: identifier "uint32_t" is undefined
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c:     currentmode = ((uint32_t)GPIO_InitStruct->GPIO_Mode) & ((uint32_t)0x0F);
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c:                     ^
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c(183): error:  #18: expected a ")"
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c:     currentmode = ((uint32_t)GPIO_InitStruct->GPIO_Mode) & ((uint32_t)0x0F);
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c:                              ^
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c(183): error:  #18: expected a ")"
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c:     currentmode = ((uint32_t)GPIO_InitStruct->GPIO_Mode) & ((uint32_t)0x0F);
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c:                                                                       ^
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c(184): error:  #18: expected a ")"
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c:     if ((((uint32_t)GPIO_InitStruct->GPIO_Mode) & ((uint32_t)0x10)) != 0x00)
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c:                     ^
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c(184): error:  #18: expected a ")"
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c:     if ((((uint32_t)GPIO_InitStruct->GPIO_Mode) & ((uint32_t)0x10)) != 0x00)
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c:                                                              ^
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c(189): error:  #65: expected a ";"
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c:       currentmode |= (uint32_t)GPIO_InitStruct->GPIO_Speed;
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c:                                ^
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c(193): error:  #18: expected a ")"
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c:     if (((uint32_t)GPIO_InitStruct->GPIO_Pin & ((uint32_t)0x00FF)) != 0x00)
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c:                    ^
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c(198): error:  #18: expected a ")"
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c:         pos = ((uint32_t)0x01) << pinpos;
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c:                          ^
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c(205): error:  #18: expected a ")"
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c:           pinmask = ((uint32_t)0x0F) << pos;
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c:                                ^
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c(212): error:  #18: expected a ")"
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c:             GPIOx->BRR = (((uint32_t)0x01) << pinpos);
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c:                                      ^
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c(219): error:  #18: expected a ")"
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c:               GPIOx->BSRR = (((uint32_t)0x01) << pinpos);
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c:                                         ^
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c(233): error:  #18: expected a ")"
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c:         pos = (((uint32_t)0x01) << (pinpos + 0x08));
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c:                           ^
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c(240): error:  #18: expected a ")"
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c:           pinmask = ((uint32_t)0x0F) << pos;
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c:                                ^
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c(247): error:  #18: expected a ")"
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c:             GPIOx->BRR = (((uint32_t)0x01) << (pinpos + 0x08));
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c:                                      ^
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c(252): error:  #18: expected a ")"
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c:             GPIOx->BSRR = (((uint32_t)0x01) << (pinpos + 0x08));
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c:                                       ^
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c(281): error:  #20: identifier "uint8_t" is undefined
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c:   uint8_t GPIO_ReadInputDataBit(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin)
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c:   ^
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c(281): error:  #20: identifier "uint16_t" is undefined
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c:   uint8_t GPIO_ReadInputDataBit(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin)
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c:                                                      ^
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c(283): error:  #20: identifier "uint8_t" is undefined
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c:     uint8_t bitstatus = 0x00;
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c:     ^
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c(289): error:  #20: identifier "uint32_t" is undefined
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c:     if ((GPIOx->IDR & GPIO_Pin) != (uint32_t)Bit_RESET)
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c:                                     ^
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c(289): error:  #18: expected a ")"
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c:     if ((GPIOx->IDR & GPIO_Pin) != (uint32_t)Bit_RESET)
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c:                                              ^
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c(291): error:  #20: identifier "uint8_t" is undefined
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c:       bitstatus = (uint8_t)Bit_SET;
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c:                    ^
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c(291): error:  #65: expected a ";"
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c:       bitstatus = (uint8_t)Bit_SET;
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c:                            ^
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c(295): error:  #20: identifier "uint8_t" is undefined
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c:       bitstatus = (uint8_t)Bit_RESET;
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c:                    ^
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c(295): error:  #65: expected a ";"
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c:       bitstatus = (uint8_t)Bit_RESET;
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c:                            ^
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c(297): warning:  #1166-D: returning pointer to local variable
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c:     return bitstatus;
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c:            ^
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c(305): error:  #20: identifier "uint16_t" is undefined
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c:   uint16_t GPIO_ReadInputData(GPIO_TypeDef* GPIOx)
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c:   ^
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c(310): error:  #20: identifier "uint16_t" is undefined
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c:     return ((uint16_t)GPIOx->IDR);
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c:              ^
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c(310): error:  #18: expected a ")"
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c:     return ((uint16_t)GPIOx->IDR);
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c:                       ^
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c(320): error:  #20: identifier "uint8_t" is undefined
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c:   uint8_t GPIO_ReadOutputDataBit(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin)
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c:   ^
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c: Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c: 1 warning, 30 errors
+compiling stm32f10x_rcc.c...
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c(193): error:  #20: identifier "__I" is undefined
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c:   static __I uint8_t APBAHBPrescTable[16] = {0, 0, 0, 0, 1, 2, 3, 4, 1, 2, 3, 4, 6, 7, 8, 9};
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c:          ^
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c(193): error:  #65: expected a ";"
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c:   static __I uint8_t APBAHBPrescTable[16] = {0, 0, 0, 0, 1, 2, 3, 4, 1, 2, 3, 4, 6, 7, 8, 9};
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c:                      ^
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c(194): error:  #20: identifier "__I" is undefined
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c:   static __I uint8_t ADCPrescTable[4] = {2, 4, 6, 8};
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c:          ^
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c(194): error:  #65: expected a ";"
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c:   static __I uint8_t ADCPrescTable[4] = {2, 4, 6, 8};
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c:                      ^
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c(220): error:  #20: identifier "uint32_t" is undefined
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c:     RCC->CR |= (uint32_t)0x00000001;
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c:                 ^
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c(220): error:  #65: expected a ";"
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c:     RCC->CR |= (uint32_t)0x00000001;
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c:                          ^
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c(224): error:  #65: expected a ";"
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c:     RCC->CFGR &= (uint32_t)0xF8FF0000;
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c:                            ^
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c(230): error:  #65: expected a ";"
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c:     RCC->CR &= (uint32_t)0xFEF6FFFF;
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c:                          ^
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c(233): error:  #65: expected a ";"
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c:     RCC->CR &= (uint32_t)0xFFFBFFFF;
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c:                          ^
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c(236): error:  #65: expected a ";"
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c:     RCC->CFGR &= (uint32_t)0xFF80FFFF;
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c:                            ^
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c(270): error:  #20: identifier "uint32_t" is undefined
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c:   void RCC_HSEConfig(uint32_t RCC_HSE)
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c:                      ^
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c(276): error:  #20: identifier "uint32_t" is undefined
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c:     RCC->CR &= CR_HSEON_Reset;
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c:                ^
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c(276): error:  #18: expected a ")"
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c:     RCC->CR &= CR_HSEON_Reset;
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c:                ^
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c(278): error:  #18: expected a ")"
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c:     RCC->CR &= CR_HSEBYP_Reset;
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c:                ^
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c(284): error:  #18: expected a ")"
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c:         RCC->CR |= CR_HSEON_Set;
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c:                    ^
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c(289): error:  #18: expected a ")"
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c:         RCC->CR |= CR_HSEBYP_Set | CR_HSEON_Set;
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c:                    ^
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c(289): error:  #18: expected a ")"
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c:         RCC->CR |= CR_HSEBYP_Set | CR_HSEON_Set;
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c:                                    ^
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c(306): error:  #20: identifier "__IO" is undefined
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c:     __IO uint32_t StartUpCounter = 0;
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c:     ^
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c(306): error:  #65: expected a ";"
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c:     __IO uint32_t StartUpCounter = 0;
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c:                   ^
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c(314): error:  #20: identifier "StartUpCounter" is undefined
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c:       StartUpCounter++;  
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c:       ^
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c(315): error:  #20: identifier "StartUpCounter" is undefined
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c:     } while((StartUpCounter != HSE_STARTUP_TIMEOUT) && (HSEStatus == RESET));
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c:              ^
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c(315): error:  #20: identifier "HSE_STARTUP_TIMEOUT" is undefined
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c:     } while((StartUpCounter != HSE_STARTUP_TIMEOUT) && (HSEStatus == RESET));
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c:                                ^
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c(334): error:  #757: variable "uint8_t" is not a type name
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c:   void RCC_AdjustHSICalibrationValue(uint8_t HSICalibrationValue)
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c:                                      ^
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c(336): error:  #20: identifier "uint32_t" is undefined
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c:     uint32_t tmpreg = 0;
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c:     ^
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c(341): error:  #20: identifier "uint32_t" is undefined
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c:     tmpreg &= CR_HSITRIM_Mask;
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c:               ^
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c(341): error:  #18: expected a ")"
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c:     tmpreg &= CR_HSITRIM_Mask;
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c:               ^
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c(343): error:  #65: expected a ";"
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c:     tmpreg |= (uint32_t)HSICalibrationValue << 3;
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c:                         ^
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c(358): error:  #20: identifier "__IO" is undefined
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c:     *(__IO uint32_t *) CR_HSION_BB = (uint32_t)NewState;
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c:       ^
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c(358): error:  #18: expected a ")"
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c:     *(__IO uint32_t *) CR_HSION_BB = (uint32_t)NewState;
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c:            ^
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c(358): error:  #20: identifier "uint32_t" is undefined
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c:     *(__IO uint32_t *) CR_HSION_BB = (uint32_t)NewState;
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c:                                       ^
+Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c: Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c: 0 warnings, 30 errors
+Target not created
+Build target 'Target 1'
+compiling main.c...
+user\public.h(7): warning:  #1-D: last line of file ends without a newline
+user\public.h:   #endif
+user\public.h:         ^
+user\public.h: user\main.c: 1 warning, 0 errors
+compiling stm32f10x_it.c...
+compiling core_cm3.c...
+compiling system_stm32f10x.c...
+assembling startup_stm32f10x_hd.s...
+compiling stm32f10x_gpio.c...
+compiling stm32f10x_rcc.c...
+linking...
+Program Size: Code=2748 RO-data=336 RW-data=40 ZI-data=1632  
+FromELF: creating hex file...
+".\output\工程模板.axf" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+compiling stm32f10x_it.c...
+compiling core_cm3.c...
+compiling system_stm32f10x.c...
+assembling startup_stm32f10x_hd.s...
+compiling stm32f10x_gpio.c...
+compiling stm32f10x_rcc.c...
+linking...
+Program Size: Code=2748 RO-data=336 RW-data=40 ZI-data=1632  
+FromELF: creating hex file...
+".\output\工程模板.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+compiling stm32f10x_it.c...
+compiling core_cm3.c...
+compiling system_stm32f10x.c...
+assembling startup_stm32f10x_hd.s...
+compiling stm32f10x_gpio.c...
+compiling stm32f10x_rcc.c...
+linking...
+Program Size: Code=2748 RO-data=336 RW-data=40 ZI-data=1632  
+FromELF: creating hex file...
+".\output\工程模板.axf" - 0 Error(s), 0 Warning(s).
